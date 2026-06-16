@@ -21,8 +21,59 @@
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden}
 
+/* ══ ANNOUNCEMENT BAR ══ */
+#announce-bar{
+  background:linear-gradient(90deg,var(--navy2) 0%,#0a1f3d 40%,var(--navy2) 100%);
+  border-bottom:1px solid rgba(0,176,155,.25);
+  padding:.55rem 1.5rem;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;z-index:1001;
+  transition:max-height .4s ease,padding .4s ease,opacity .3s ease;
+  overflow:hidden;max-height:80px;
+}
+#announce-bar.hidden{max-height:0;padding:0;opacity:0;pointer-events:none}
+.announce-inner{
+  display:flex;align-items:center;gap:.75rem;
+  max-width:1240px;width:100%;justify-content:center;
+  position:relative;padding:0 2rem;
+}
+.announce-badge{
+  background:var(--gold);color:var(--navy);
+  font-size:.65rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;
+  padding:.2rem .65rem;border-radius:50px;white-space:nowrap;flex-shrink:0;
+}
+.announce-text{
+  color:rgba(255,255,255,.9);font-size:.8rem;font-weight:500;
+  text-align:center;line-height:1.4;
+}
+.announce-text strong{color:#fff;font-weight:700}
+.announce-link{
+  color:var(--teal2);font-size:.78rem;font-weight:700;
+  text-decoration:none;white-space:nowrap;flex-shrink:0;
+  border-bottom:1px solid rgba(0,176,155,.4);
+  transition:color .2s,border-color .2s;
+}
+.announce-link:hover{color:#fff;border-color:#fff}
+.announce-close{
+  position:absolute;right:0;top:50%;transform:translateY(-50%);
+  background:none;border:none;cursor:pointer;
+  color:rgba(255,255,255,.4);font-size:1rem;line-height:1;
+  padding:.25rem;transition:color .2s;
+}
+.announce-close:hover{color:#fff}
+/* Animated dot */
+.announce-dot{
+  width:7px;height:7px;border-radius:50%;background:var(--teal);
+  flex-shrink:0;animation:adot 2s ease-in-out infinite;
+}
+@keyframes adot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+@media(max-width:700px){
+  .announce-badge{display:none}
+  .announce-text{font-size:.74rem}
+}
+
 /* ══ NAV ══ */
-#nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:background .35s,box-shadow .35s}
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:background .35s,box-shadow .35s,top .3s}
 #nav.scrolled{background:rgba(7,22,43,.98);backdrop-filter:blur(20px);box-shadow:0 2px 24px rgba(0,0,0,.22)}
 .nav-inner{max-width:1240px;margin:0 auto;padding:.9rem 2rem;display:flex;align-items:center;gap:1.5rem}
 .nav-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:900;color:#fff;text-decoration:none;white-space:nowrap;margin-right:auto;letter-spacing:-.01em}
@@ -453,6 +504,20 @@ footer{background:#050f1e;padding:4rem 0 2rem;border-top:1px solid rgba(0,176,15
 </head>
 <body>
 
+<!-- ══ ANNOUNCEMENT BAR ══ -->
+<div id="announce-bar">
+  <div class="announce-inner">
+    <div class="announce-dot"></div>
+    <span class="announce-badge">Limited Spots</span>
+    <p class="announce-text">
+      <strong>July 2026 Cohort Now Open</strong> — Only 15 spots available for our Full Package.
+      Secure your place before they fill up.
+    </p>
+    <a href="#contact" class="announce-link" onclick="dismissBar()">Apply Now →</a>
+    <button class="announce-close" onclick="dismissBar()" aria-label="Close announcement">✕</button>
+  </div>
+</div>
+
 <!-- ══ NAV ══ -->
 <nav id="nav">
   <div class="nav-inner">
@@ -509,7 +574,7 @@ footer{background:#050f1e;padding:4rem 0 2rem;border-top:1px solid rgba(0,176,15
     </ul>
 
     <div class="nav-actions">
-      <a href="https://portal.nclexprosolutions.com/login" class="btn-nav-ghost">Register/Login</a>
+      <a href="https://portal.nclexprosolutions.com/login" class="btn-nav-ghost">Client Login</a>
       <a href="#contact" class="btn-nav-cta">Book Free Call →</a>
     </div>
     <button class="nav-mob-btn" onclick="toggleMobNav()">☰</button>
@@ -1238,6 +1303,32 @@ footer{background:#050f1e;padding:4rem 0 2rem;border-top:1px solid rgba(0,176,15
 </a>
 
 <script>
+// ── NAV SCROLL ──
+// ── ANNOUNCEMENT BAR ──
+function dismissBar() {
+  const bar = document.getElementById('announce-bar');
+  bar.classList.add('hidden');
+  sessionStorage.setItem('announce-dismissed', '1');
+  updateNavOffset();
+}
+
+function updateNavOffset() {
+  const bar = document.getElementById('announce-bar');
+  const barH = bar.classList.contains('hidden') ? 0 : bar.offsetHeight;
+  const nav  = document.getElementById('nav');
+  nav.style.top = barH + 'px';
+  // push hero down so it isn't hidden behind nav+bar
+  const hero = document.getElementById('hero');
+  if (hero) hero.style.paddingTop = (barH + 80) + 'px';
+}
+
+// Restore dismiss state across page load
+if (sessionStorage.getItem('announce-dismissed') === '1') {
+  document.getElementById('announce-bar').classList.add('hidden');
+}
+updateNavOffset();
+window.addEventListener('resize', updateNavOffset);
+
 // ── NAV SCROLL ──
 window.addEventListener('scroll', () => {
   document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
