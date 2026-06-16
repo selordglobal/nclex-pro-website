@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Africa's leading NCLEX coaching agency. Expert guidance for African nurses — Ghana, Nigeria, Sierra Leone, Kenya and beyond — on their journey to becoming US, Canadian, and Australian Registered Nurses."/>
+<title>NCLEX Pro Solutions — Africa's #1 NCLEX Coaching Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#07162b;--navy2:#0d2242;--navy3:#132d55;
+  --teal:#00b09b;--teal2:#00cdb6;--teal3:#00e8ce;
+  --gold:#c8940a;--gold2:#e8b830;--gold3:#ffd060;
+  --cream:#f6f3ed;--white:#fff;
+  --ink:#0c1d30;--muted:#5c6d82;--pale:#e2e8f0;--pale2:#f0f4f8;
+  --r:12px;--r2:20px;--r3:6px;
+  --shadow:0 4px 24px rgba(7,22,43,.08);
+  --shadow2:0 16px 56px rgba(7,22,43,.16);
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden}
+
+/* ══ NAV ══ */
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:all .35s}
+#nav.scrolled{background:rgba(7,22,43,.97);backdrop-filter:blur(20px);box-shadow:0 2px 24px rgba(0,0,0,.2)}
+.nav-inner{max-width:1240px;margin:0 auto;padding:1.1rem 2rem;display:flex;align-items:center;gap:2rem}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:900;color:#fff;text-decoration:none;white-space:nowrap;margin-right:auto}
+.nav-logo span{color:var(--teal2)}
+.nav-links{display:flex;gap:.25rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,.65);text-decoration:none;font-size:.82rem;font-weight:600;padding:.45rem .85rem;border-radius:50px;transition:all .2s}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.nav-actions{display:flex;gap:.6rem;align-items:center;flex-shrink:0}
+.btn-nav-ghost{padding:.5rem 1.1rem;border-radius:50px;border:1.5px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8);font-size:.8rem;font-weight:600;background:transparent;cursor:pointer;font-family:'DM Sans',sans-serif;text-decoration:none;transition:all .2s}
+.btn-nav-ghost:hover{border-color:rgba(255,255,255,.6);color:#fff}
+.btn-nav-cta{padding:.55rem 1.3rem;border-radius:50px;background:var(--teal);color:#fff;font-size:.8rem;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;text-decoration:none;transition:all .2s;border:none;white-space:nowrap}
+.btn-nav-cta:hover{background:var(--teal2);transform:translateY(-1px)}
+.nav-mob-btn{display:none;background:none;border:none;cursor:pointer;padding:.4rem;color:#fff;font-size:1.4rem}
+
+/* ══ BUTTONS ══ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.85rem 1.8rem;border-radius:50px;font-size:.9rem;font-weight:700;cursor:pointer;border:none;font-family:'DM Sans',sans-serif;transition:all .25s;text-decoration:none;white-space:nowrap}
+.btn-primary{background:var(--teal);color:#fff;box-shadow:0 4px 20px rgba(0,176,155,.35)}
+.btn-primary:hover{background:var(--teal2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,176,155,.45)}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-white:hover{background:var(--cream);transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--navy);border:2px solid var(--pale)}
+.btn-outline:hover{border-color:var(--teal);color:var(--teal)}
+.btn-outline-white{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.3)}
+.btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-lg{padding:1.1rem 2.4rem;font-size:1rem}
+.btn-sm{padding:.55rem 1.2rem;font-size:.8rem}
+
+/* ══ SECTION COMMONS ══ */
+.section-tag{display:inline-flex;align-items:center;gap:.4rem;background:rgba(0,176,155,.1);border:1px solid rgba(0,176,155,.25);color:var(--teal);padding:.3rem .9rem;border-radius:50px;font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:.9rem}
+.section-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:900;line-height:1.12;color:var(--navy)}
+.section-title em{font-style:normal;color:var(--teal)}
+.section-sub{color:var(--muted);font-size:1rem;line-height:1.75;max-width:560px}
+.section-center{text-align:center}
+.section-center .section-sub{margin:0 auto}
+.wrap{max-width:1240px;margin:0 auto;padding:0 2rem}
+section{padding:6rem 0}
+
+/* ══ HERO ══ */
+#hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;position:relative;overflow:hidden;padding-top:80px}
+.hero-bg{position:absolute;inset:0;overflow:hidden}
+.hero-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 70% 40%,rgba(0,176,155,.14) 0%,transparent 65%),radial-gradient(ellipse 50% 50% at 15% 80%,rgba(200,148,10,.09) 0%,transparent 55%)}
+.hero-grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 0%,transparent 100%)}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center;padding:4rem 0}
+.hero-eyebrow{display:flex;align-items:center;gap:.6rem;margin-bottom:1.4rem}
+.hero-eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);animation:blink 2s infinite}
+.hero-eyebrow-text{color:var(--teal2);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4rem);font-weight:900;line-height:1.08;color:#fff;margin-bottom:1.3rem}
+.hero-h1 .line-gold{color:var(--gold2)}
+.hero-h1 .line-teal{color:var(--teal2)}
+.hero-sub{color:rgba(255,255,255,.6);font-size:1.05rem;line-height:1.75;margin-bottom:2.2rem;max-width:500px}
+.hero-actions{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:3rem}
+.hero-stats{display:flex;gap:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)}
+.h-stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--gold2);display:block;line-height:1}
+.h-stat-label{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.25rem;font-weight:500}
+
+/* Hero right panel */
+.hero-card-wrap{position:relative}
+.hero-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r2);padding:2.2rem;backdrop-filter:blur(12px);position:relative;overflow:hidden}
+.hero-card::before{content:'';position:absolute;top:0;left:1.5rem;right:1.5rem;height:2px;background:linear-gradient(90deg,transparent,var(--teal),transparent)}
+.hero-card-title{font-family:'Playfair Display',serif;font-size:1.15rem;color:#fff;font-weight:700;margin-bottom:.3rem}
+.hero-card-sub{color:rgba(255,255,255,.4);font-size:.8rem;margin-bottom:1.4rem}
+.audience-toggle{display:flex;background:rgba(255,255,255,.06);border-radius:50px;padding:.25rem;margin-bottom:1.5rem;gap:.25rem}
+.aud-tab{flex:1;text-align:center;padding:.5rem .6rem;border-radius:50px;font-size:.75rem;font-weight:700;cursor:pointer;color:rgba(255,255,255,.4);transition:all .2s}
+.aud-tab.on{background:var(--teal);color:#fff}
+.path-list{list-style:none}
+.path-item{display:flex;align-items:flex-start;gap:.8rem;padding:.75rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.path-item:last-child{border:none}
+.path-icon{width:30px;height:30px;border-radius:8px;background:rgba(0,176,155,.18);display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+.path-text strong{display:block;color:#fff;font-size:.85rem;font-weight:600}
+.path-text span{color:rgba(255,255,255,.45);font-size:.75rem}
+.hero-wa{display:flex;align-items:center;gap:.75rem;background:#25d366;color:#fff;padding:.85rem 1.2rem;border-radius:var(--r);margin-top:1.4rem;text-decoration:none;font-weight:700;font-size:.88rem;transition:all .2s}
+.hero-wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+/* Floating badge */
+.hero-float-badge{position:absolute;top:-1.2rem;right:1.5rem;background:var(--gold);color:var(--navy);padding:.4rem .9rem;border-radius:50px;font-size:.72rem;font-weight:800;letter-spacing:.03em;box-shadow:0 4px 16px rgba(200,148,10,.4)}
+
+/* ══ TRUST BAR ══ */
+#trust{background:var(--navy2);padding:1.4rem 0;border-top:1px solid rgba(0,176,155,.15);border-bottom:1px solid rgba(0,176,155,.15)}
+.trust-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:.7rem}
+.trust-icon{width:38px;height:38px;border-radius:10px;background:rgba(0,176,155,.12);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.trust-val{color:#fff;font-weight:600;font-size:.88rem}
+.trust-lbl{color:rgba(255,255,255,.4);font-size:.72rem}
+.trust-div{width:1px;height:36px;background:rgba(255,255,255,.08)}
+
+/* ══ SERVICES ══ */
+#services{background:var(--cream)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.svc-card{background:#fff;border:1.5px solid var(--pale);border-radius:var(--r2);padding:2rem;position:relative;overflow:hidden;transition:all .3s;cursor:pointer}
+.svc-card:hover{border-color:var(--teal);transform:translateY(-4px);box-shadow:var(--shadow2)}
+.svc-card.featured{background:var(--navy);border-color:var(--teal)}
+.svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--teal);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-icon{width:52px;height:52px;border-radius:14px;background:rgba(0,176,155,.1);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1.3rem}
+.svc-card.featured .svc-icon{background:rgba(0,176,155,.2)}
+.svc-badge{position:absolute;top:1.2rem;right:1.2rem;background:var(--gold);color:var(--navy);font-size:.68rem;font-weight:800;padding:.2rem .65rem;border-radius:50px}
+.svc-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.svc-card.featured .svc-title{color:#fff}
+.svc-desc{color:var(--muted);font-size:.85rem;line-height:1.65;margin-bottom:1.2rem}
+.svc-card.featured .svc-desc{color:rgba(255,255,255,.55)}
+.svc-list{list-style:none}
+.svc-item{display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--ink);padding:.3rem 0}
+.svc-item::before{content:'✓';color:var(--teal);font-weight:700}
+.svc-card.featured .svc-item{color:rgba(255,255,255,.8)}
+.svc-link{display:inline-flex;align-items:center;gap:.4rem;color:var(--teal);font-size:.85rem;font-weight:700;margin-top:1.2rem;text-decoration:none;transition:gap .2s}
+.svc-link:hover{gap:.75rem}
+.disclaimer{background:rgba(0,176,155,.06);border:1px solid rgba(0,176,155,.15);border-radius:var(--r);padding:1rem 1.3rem;margin-top:2rem;font-size:.8rem;color:var(--muted);line-height:1.65}
+.disclaimer strong{color:var(--navy)}
+
+/* ══ HOW IT WORKS ══ */
+#how{background:#fff}
+.how-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-top:3.5rem;position:relative}
+.how-grid::before{content:'';position:absolute;top:2.4rem;left:calc(100%/12);right:calc(100%/12);height:2px;background:linear-gradient(90deg,var(--teal),rgba(0,176,155,.1));z-index:0}
+.how-step{display:flex;flex-direction:column;align-items:center;padding:1.5rem 1rem;position:relative;z-index:1;text-align:center}
+.how-num{width:50px;height:50px;border-radius:50%;background:var(--navy);border:3px solid var(--teal);color:var(--teal);font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
+.how-step.active .how-num{background:var(--teal);color:#fff;border-color:var(--teal);box-shadow:0 0 0 8px rgba(0,176,155,.12)}
+.how-title{font-weight:700;font-size:.88rem;color:var(--navy);margin-bottom:.4rem;line-height:1.3}
+.how-desc{font-size:.75rem;color:var(--muted);line-height:1.55}
+
+/* ══ AUDIENCE SPLIT ══ */
+#audience{background:var(--navy);padding:5rem 0}
+.audience-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
+.aud-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:var(--r2);padding:2.5rem;position:relative;overflow:hidden;transition:all .3s}
+.aud-card:hover{border-color:rgba(0,176,155,.4);transform:translateY(-3px)}
+.aud-card::after{content:attr(data-emoji);position:absolute;right:1.5rem;bottom:1.5rem;font-size:5rem;opacity:.06}
+.aud-label{display:inline-block;background:rgba(0,176,155,.14);border:1px solid rgba(0,176,155,.28);color:var(--teal2);padding:.3rem .85rem;border-radius:50px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.9rem}
+.aud-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:#fff;line-height:1.2;margin-bottom:.75rem}
+.aud-desc{color:rgba(255,255,255,.55);font-size:.88rem;line-height:1.75;margin-bottom:1.5rem}
+.aud-points{list-style:none;margin-bottom:2rem}
+.aud-point{display:flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.75);font-size:.85rem;padding:.35rem 0}
+.aud-point::before{content:'→';color:var(--teal);font-weight:700;flex-shrink:0}
+
+/* ══ STATS BAND ══ */
+#stats-band{background:linear-gradient(135deg,var(--navy2),var(--navy3));padding:4rem 0}
+.stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
+.stat-item{padding:1.5rem}
+.stat-num{font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--gold2);line-height:1;display:block}
+.stat-label{color:rgba(255,255,255,.5);font-size:.82rem;margin-top:.4rem}
+.stat-bar{height:3px;background:rgba(255,255,255,.08);border-radius:2px;margin-top:1rem;overflow:hidden}
+.stat-bar-fill{height:100%;background:linear-gradient(90deg,var(--teal),var(--teal2));border-radius:2px;width:0;transition:width 1.5s ease}
+
+/* ══ TESTIMONIALS ══ */
+#testimonials{background:var(--cream)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.testi-card{background:#fff;border:1.5px solid var(--pale);border-radius:var(--r2);padding:2rem;transition:all .3s;position:relative}
+.testi-card:hover{border-color:var(--teal);box-shadow:0 8px 32px rgba(0,176,155,.1)}
+.testi-quote-mark{font-family:'Playfair Display',serif;font-size:4rem;color:var(--teal);line-height:.8;margin-bottom:.5rem;opacity:.4}
+.testi-text{color:var(--ink);font-size:.9rem;line-height:1.8;font-style:italic;margin-bottom:1.5rem}
+.testi-author{display:flex;align-items:center;gap:.8rem}
+.testi-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--navy));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:.9rem;flex-shrink:0}
+.testi-name{font-weight:700;font-size:.88rem;color:var(--navy)}
+.testi-role{font-size:.75rem;color:var(--muted)}
+.testi-stars{color:var(--gold2);font-size:.85rem;letter-spacing:.1em;margin-bottom:.75rem}
+.testi-featured{background:var(--navy);border-color:var(--navy)}
+.testi-featured .testi-text{color:rgba(255,255,255,.8);font-style:normal;font-size:1rem;line-height:1.8}
+.testi-featured .testi-name{color:#fff}
+.testi-featured .testi-role{color:rgba(255,255,255,.45)}
+.testi-featured .testi-quote-mark{color:var(--teal2);opacity:.6}
+
+/* ══ TILLY ══ */
+#about{background:#fff}
+.about-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:center}
+.about-img-wrap{position:relative}
+.about-img{width:100%;aspect-ratio:3/4;border-radius:var(--r2);background:linear-gradient(135deg,var(--teal) 0%,var(--navy) 100%);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.about-img-placeholder{font-size:10rem;opacity:.2}
+.about-img-card{position:absolute;bottom:-1.5rem;right:-1.5rem;background:#fff;border-radius:var(--r2);padding:1.1rem 1.5rem;box-shadow:var(--shadow2);border:1.5px solid var(--pale)}
+.about-img-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--teal)}
+.about-img-lbl{font-size:.72rem;color:var(--muted);font-weight:500}
+.about-img-card2{position:absolute;top:1.5rem;left:-1.5rem;background:var(--gold);border-radius:var(--r);padding:.8rem 1.1rem;box-shadow:0 4px 20px rgba(200,148,10,.35)}
+.about-img-card2 span{display:block;color:#fff;font-weight:800;font-size:.8rem}
+.about-credentials{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.5rem}
+.credential{background:rgba(0,176,155,.08);border:1px solid rgba(0,176,155,.2);color:var(--teal);padding:.3rem .85rem;border-radius:50px;font-size:.75rem;font-weight:700}
+.about-bio{color:var(--muted);font-size:.95rem;line-height:1.8;margin-bottom:1.2rem}
+
+/* ══ RESOURCES ══ */
+#resources{background:var(--cream)}
+.resources-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
+.res-card{background:#fff;border:1.5px solid var(--pale);border-radius:var(--r2);padding:1.4rem;transition:all .25s;cursor:pointer}
+.res-card:hover{border-color:var(--teal);transform:translateY(-3px);box-shadow:var(--shadow)}
+.res-icon{font-size:1.8rem;margin-bottom:.8rem}
+.res-title{font-weight:700;font-size:.9rem;color:var(--navy);margin-bottom:.3rem}
+.res-desc{font-size:.78rem;color:var(--muted);line-height:1.6}
+.res-link{display:inline-flex;align-items:center;gap:.3rem;color:var(--teal);font-size:.78rem;font-weight:700;margin-top:.75rem;text-decoration:none;transition:gap .2s}
+.res-link:hover{gap:.6rem}
+
+/* ══ PORTAL CTA ══ */
+#portal-cta{background:var(--navy);padding:5rem 0;position:relative;overflow:hidden}
+#portal-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(0,176,155,.15) 0%,transparent 70%),radial-gradient(ellipse 40% 60% at 20% 80%,rgba(200,148,10,.08) 0%,transparent 60%)}
+.portal-cta-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr 1fr;gap:4rem;align-items:center}
+.portal-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:.9rem}
+.portal-title span{color:var(--gold2)}
+.portal-desc{color:rgba(255,255,255,.55);font-size:.95rem;line-height:1.75;margin-bottom:1.5rem}
+.portal-features{list-style:none;margin-bottom:2rem}
+.portal-feature{display:flex;align-items:center;gap:.7rem;color:rgba(255,255,255,.75);font-size:.875rem;padding:.4rem 0}
+.portal-feature::before{content:'✓';color:var(--teal);font-weight:800;flex-shrink:0}
+.portal-cards{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.p-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:1.1rem;text-align:center;cursor:pointer;transition:all .2s;text-decoration:none}
+.p-card:hover{background:rgba(0,176,155,.12);border-color:rgba(0,176,155,.35);transform:translateY(-2px)}
+.p-card-icon{font-size:1.5rem;margin-bottom:.4rem;display:block}
+.p-card-title{color:#fff;font-weight:700;font-size:.82rem}
+.p-card-sub{color:rgba(255,255,255,.4);font-size:.72rem;margin-top:.15rem}
+
+/* ══ FAQ ══ */
+#faq{background:#fff}
+.faq-wrap{max-width:740px;margin:3rem auto 0}
+.faq-item{border-bottom:1px solid var(--pale);overflow:hidden}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 0;cursor:pointer;gap:1rem}
+.faq-q-text{font-weight:600;font-size:.95rem;color:var(--navy);line-height:1.4}
+.faq-arrow{width:28px;height:28px;border-radius:50%;background:var(--pale2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s;color:var(--navy);font-size:.75rem}
+.faq-item.open .faq-arrow{background:var(--teal);color:#fff;transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a-inner{padding:0 0 1.2rem;color:var(--muted);font-size:.875rem;line-height:1.75}
+
+/* ══ CONTACT ══ */
+#contact{background:var(--cream)}
+.contact-inner{display:grid;grid-template-columns:1fr 1.3fr;gap:4rem;align-items:start}
+.contact-info-title{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:var(--navy);margin-bottom:.75rem}
+.contact-info-sub{color:var(--muted);font-size:.9rem;line-height:1.7;margin-bottom:2rem}
+.contact-item{display:flex;align-items:flex-start;gap:.9rem;margin-bottom:1.2rem}
+.contact-icon{width:40px;height:40px;border-radius:10px;background:rgba(0,176,155,.1);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.contact-label{font-size:.72rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.contact-value{font-size:.9rem;font-weight:600;color:var(--navy)}
+.contact-form{background:#fff;border:1.5px solid var(--pale);border-radius:var(--r2);padding:2rem;box-shadow:var(--shadow)}
+.fg{display:flex;flex-direction:column;gap:.35rem;margin-bottom:.9rem}
+.fg label{font-size:.75rem;font-weight:700;color:var(--ink);letter-spacing:.02em}
+.fg label .req{color:var(--teal)}
+.fg input,.fg select,.fg textarea{width:100%;padding:.75rem 1rem;border:1.5px solid rgba(7,22,43,.1);border-radius:var(--r3);font-size:.875rem;font-family:'DM Sans',sans-serif;color:var(--ink);background:#fff;outline:none;transition:border-color .2s,box-shadow .2s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,176,155,.1)}
+.fg textarea{resize:vertical;min-height:100px}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+
+/* ══ NEWS ══ */
+#news{background:#fff}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.news-card{border:1.5px solid var(--pale);border-radius:var(--r2);overflow:hidden;transition:all .25s;cursor:pointer;background:#fff}
+.news-card:hover{border-color:var(--teal);box-shadow:var(--shadow)}
+.news-img{height:180px;background:linear-gradient(135deg,var(--navy2),var(--navy3));display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative}
+.news-cat{position:absolute;top:.75rem;left:.75rem;background:var(--teal);color:#fff;font-size:.68rem;font-weight:700;padding:.2rem .65rem;border-radius:50px}
+.news-body{padding:1.3rem}
+.news-date{font-size:.72rem;color:var(--muted);margin-bottom:.4rem}
+.news-title{font-weight:700;font-size:.9rem;color:var(--navy);line-height:1.4;margin-bottom:.5rem}
+.news-excerpt{font-size:.8rem;color:var(--muted);line-height:1.6}
+
+/* ══ FOOTER ══ */
+footer{background:#050f1e;padding:4rem 0 2rem;border-top:1px solid rgba(0,176,155,.15)}
+.footer-inner{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-brand-name{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:#fff;margin-bottom:.6rem}
+.footer-brand-name span{color:var(--teal)}
+.footer-tagline{color:rgba(255,255,255,.35);font-size:.82rem;line-height:1.7;margin-bottom:1.5rem;max-width:280px}
+.footer-wa{display:inline-flex;align-items:center;gap:.5rem;background:#25d366;color:#fff;padding:.55rem 1.2rem;border-radius:50px;font-size:.8rem;font-weight:700;text-decoration:none;transition:all .2s}
+.footer-wa:hover{background:#1ebe5d}
+.footer-col-title{color:#fff;font-weight:700;font-size:.82rem;margin-bottom:1.1rem;letter-spacing:.03em}
+.footer-links{list-style:none}
+.footer-links li{margin-bottom:.55rem}
+.footer-links a{color:rgba(255,255,255,.38);font-size:.82rem;text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--teal2)}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:2rem;border-top:1px solid rgba(255,255,255,.06);flex-wrap:wrap;gap:1rem}
+.footer-copy{color:rgba(255,255,255,.25);font-size:.78rem}
+.footer-socials{display:flex;gap:.6rem}
+.social-icon{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);font-size:.8rem;text-decoration:none;transition:all .2s}
+.social-icon:hover{background:var(--teal);border-color:var(--teal);color:#fff}
+
+/* Floating WhatsApp */
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:999;width:56px;height:56px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;font-size:1.6rem;text-decoration:none;box-shadow:0 4px 24px rgba(37,211,102,.45);animation:waFloat 3s ease-in-out infinite}
+@keyframes waFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.wa-float:hover{animation:none;transform:scale(1.1)}
+.wa-float-tip{position:absolute;right:calc(100% + .6rem);background:var(--navy);color:#fff;white-space:nowrap;padding:.4rem .85rem;border-radius:50px;font-size:.75rem;font-weight:600;opacity:0;transition:opacity .2s;pointer-events:none}
+.wa-float:hover .wa-float-tip{opacity:1}
+
+/* Mobile nav */
+.mob-nav{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--navy);z-index:999;display:flex;flex-direction:column;padding:2rem;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1)}
+.mob-nav.open{transform:none}
+.mob-nav-links{list-style:none;margin-top:4rem}
+.mob-nav-links li{border-bottom:1px solid rgba(255,255,255,.07)}
+.mob-nav-links a{display:block;padding:1rem 0;color:rgba(255,255,255,.75);font-size:1.1rem;font-weight:600;text-decoration:none}
+.mob-close{position:absolute;top:1.2rem;right:1.5rem;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer}
+
+/* ══ ANIMATIONS ══ */
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.fade-up.visible{opacity:1;transform:none}
+.stagger-1{transition-delay:.1s}
+.stagger-2{transition-delay:.2s}
+.stagger-3{transition-delay:.3s}
+.stagger-4{transition-delay:.4s}
+
+/* ══ RESPONSIVE ══ */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;padding:2rem 0}
+  .hero-card-wrap{display:none}
+  .services-grid,.testi-grid,.resources-grid,.news-grid{grid-template-columns:1fr 1fr}
+  .how-grid{grid-template-columns:repeat(3,1fr)}
+  .how-grid::before{display:none}
+  .stats-inner{grid-template-columns:1fr 1fr}
+  .about-inner{grid-template-columns:1fr}
+  .about-img-wrap{max-width:380px;margin:0 auto}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:2rem}
+  .portal-cta-inner,.contact-inner,.audience-grid{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .nav-links,.nav-actions{display:none}
+  .nav-mob-btn{display:block}
+  .services-grid,.testi-grid,.resources-grid,.news-grid,.stats-inner,.portal-cards{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr}
+  .fg-row{grid-template-columns:1fr}
+  section{padding:4rem 0}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">NCLEX <span>Pro</span> Solutions</a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#about">About Tilly</a></li>
+      <li><a href="#testimonials">Success Stories</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="https://portal.nclexprosolutions.com/login" class="btn-nav-ghost">Client Login</a>
+      <a href="https://portal.nclexprosolutions.com/qbank" class="btn-nav-ghost">📚 Question Bank</a>
+      <a href="#contact" class="btn-nav-cta">Book Free Call →</a>
+    </div>
+    <button class="nav-mob-btn" onclick="toggleMobNav()">☰</button>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<div class="mob-nav" id="mob-nav">
+  <button class="mob-close" onclick="toggleMobNav()">✕</button>
+  <div class="nav-logo" style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:#fff">NCLEX <span style="color:#00b09b">Pro</span> Solutions</div>
+  <ul class="mob-nav-links">
+    <li><a href="#services" onclick="toggleMobNav()">Services</a></li>
+    <li><a href="#how" onclick="toggleMobNav()">How It Works</a></li>
+    <li><a href="#about" onclick="toggleMobNav()">About Tilly</a></li>
+    <li><a href="#testimonials" onclick="toggleMobNav()">Success Stories</a></li>
+    <li><a href="#resources" onclick="toggleMobNav()">Resources</a></li>
+    <li><a href="#faq" onclick="toggleMobNav()">FAQ</a></li>
+    <li><a href="#contact" onclick="toggleMobNav()">Contact</a></li>
+  </ul>
+  <div style="margin-top:2rem;display:flex;flex-direction:column;gap:.75rem">
+    <a href="https://portal.nclexprosolutions.com/login" class="btn btn-outline-white">Client Login</a>
+    <a href="#contact" class="btn btn-primary">Book Free Call →</a>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-grid-lines"></div>
+  </div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <!-- Left -->
+      <div>
+        <div class="hero-eyebrow fade-up">
+          <div class="hero-eyebrow-dot"></div>
+          <span class="hero-eyebrow-text">Africa's #1 NCLEX Coaching Agency</span>
+        </div>
+        <h1 class="hero-h1 fade-up stagger-1">
+          From African<br>
+          Nurse to<br>
+          <span class="line-teal">US Registered</span><br>
+          <span class="line-gold">Nurse.</span>
+        </h1>
+        <p class="hero-sub fade-up stagger-2">Expert NCLEX coaching, credential evaluation, and board application support for African nurses — whether you're in Ghana, Nigeria, Sierra Leone, Kenya, or already in the diaspora.</p>
+        <div class="hero-actions fade-up stagger-3">
+          <a href="#contact" class="btn btn-primary btn-lg">Start Your Journey →</a>
+          <a href="https://portal.nclexprosolutions.com/qbank" class="btn btn-outline-white">📚 Free Practice Questions</a>
+        </div>
+        <div class="hero-stats fade-up stagger-4">
+          <div><span class="h-stat-num">350+</span><div class="h-stat-label">Nurses Licensed</div></div>
+          <div><span class="h-stat-num">95%</span><div class="h-stat-label">Pass Rate</div></div>
+          <div><span class="h-stat-num">6</span><div class="h-stat-label">Expert Coaches</div></div>
+          <div><span class="h-stat-num">3</span><div class="h-stat-label">Countries Served</div></div>
+        </div>
+      </div>
+      <!-- Right card -->
+      <div class="hero-card-wrap">
+        <div class="hero-float-badge">🌍 Africa & Diaspora</div>
+        <div class="hero-card">
+          <div class="hero-card-title">Your NCLEX pathway starts here</div>
+          <div class="hero-card-sub">Select your situation</div>
+          <div class="audience-toggle">
+            <div class="aud-tab on" onclick="switchAud(this,0)">🌍 In Africa</div>
+            <div class="aud-tab" onclick="switchAud(this,1)">✈️ Diaspora</div>
+            <div class="aud-tab" onclick="switchAud(this,2)">🔄 Retaker</div>
+          </div>
+          <ul class="path-list" id="hero-path">
+            <li class="path-item"><div class="path-icon">📋</div><div class="path-text"><strong>Credential Evaluation</strong><span>NMC/CGFNS/Trumerit application handled</span></div></li>
+            <li class="path-item"><div class="path-icon">📝</div><div class="path-text"><strong>Board Application</strong><span>State board + Pearson VUE ATT registration</span></div></li>
+            <li class="path-item"><div class="path-icon">🎯</div><div class="path-text"><strong>Expert NCLEX Coaching</strong><span>Personalised 12-week study plan</span></div></li>
+            <li class="path-item"><div class="path-icon">🏆</div><div class="path-text"><strong>Pass & Get Licensed</strong><span>Join 350+ nurses working in the US</span></div></li>
+          </ul>
+          <a href="https://wa.me/233504299230" class="hero-wa">💬 Chat with Tilly on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRUST BAR ══ -->
+<div id="trust">
+  <div class="wrap">
+    <div class="trust-inner">
+      <div class="trust-item"><div class="trust-icon">🇺🇸</div><div><div class="trust-val">NCLEX-RN</div><div class="trust-lbl">United States</div></div></div>
+      <div class="trust-div"></div>
+      <div class="trust-item"><div class="trust-icon">🇨🇦</div><div><div class="trust-val">NCLEX-RN</div><div class="trust-lbl">Canada — NNAS</div></div></div>
+      <div class="trust-div"></div>
+      <div class="trust-item"><div class="trust-icon">🇦🇺</div><div><div class="trust-val">NCLEX-RN</div><div class="trust-lbl">Australia — AHPRA</div></div></div>
+      <div class="trust-div"></div>
+      <div class="trust-item"><div class="trust-icon">👩‍⚕️</div><div><div class="trust-val">Midwives Welcome</div><div class="trust-lbl">Specialist pathways</div></div></div>
+      <div class="trust-div"></div>
+      <div class="trust-item"><div class="trust-icon">🏥</div><div><div class="trust-val">Public Health Nurses</div><div class="trust-lbl">Tailored support</div></div></div>
+      <div class="trust-div"></div>
+      <div class="trust-item"><div class="trust-icon">🔄</div><div><div class="trust-val">Retakers Programme</div><div class="trust-lbl">Targeted re-prep</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SERVICES ══ -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-center fade-up">
+      <span class="section-tag">What We Offer</span>
+      <h2 class="section-title" style="margin-bottom:.75rem">Everything You Need to<br><em>Get Licensed Abroad</em></h2>
+      <p class="section-sub">From your NMC licence in Ghana to your US RN badge — we handle every step in between.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card featured fade-up">
+        <div class="svc-badge">Most Popular</div>
+        <div class="svc-icon">🎯</div>
+        <div class="svc-title">Full Package</div>
+        <div class="svc-desc">Everything handled from credential evaluation to NCLEX pass. Our most comprehensive offering.</div>
+        <ul class="svc-list">
+          <li class="svc-item">Credential evaluation (Trumerit/CGFNS)</li>
+          <li class="svc-item">State board application</li>
+          <li class="svc-item">Pearson VUE ATT registration</li>
+          <li class="svc-item">Fingerprint processing</li>
+          <li class="svc-item">12-week NCLEX coaching</li>
+          <li class="svc-item">WhatsApp support throughout</li>
+        </ul>
+        <a href="#contact" class="svc-link" style="color:var(--teal2)">Apply Now →</a>
+      </div>
+      <div class="svc-card fade-up stagger-1">
+        <div class="svc-icon">📚</div>
+        <div class="svc-title">NCLEX Coaching Only</div>
+        <div class="svc-desc">Already registered with a state board? Get the expert coaching that gets you to pass first time.</div>
+        <ul class="svc-list">
+          <li class="svc-item">Personalised study plan</li>
+          <li class="svc-item">Content building sessions</li>
+          <li class="svc-item">NGN Next Gen exam prep</li>
+          <li class="svc-item">Test-taking strategy coaching</li>
+          <li class="svc-item">Question bank access</li>
+        </ul>
+        <a href="#contact" class="svc-link">Enrol Now →</a>
+      </div>
+      <div class="svc-card fade-up stagger-2">
+        <div class="svc-icon">🔄</div>
+        <div class="svc-title">Retakers Programme</div>
+        <div class="svc-desc">Failed your NCLEX? You are not alone — and this is not the end. Our targeted programme fixes what went wrong.</div>
+        <ul class="svc-list">
+          <li class="svc-item">Performance gap analysis</li>
+          <li class="svc-item">Targeted weak-area retraining</li>
+          <li class="svc-item">NGN question type mastery</li>
+          <li class="svc-item">Confidence rebuilding sessions</li>
+          <li class="svc-item">Rapid retest strategy</li>
+        </ul>
+        <a href="#contact" class="svc-link">Get Back on Track →</a>
+      </div>
+      <div class="svc-card fade-up">
+        <div class="svc-icon">📋</div>
+        <div class="svc-title">Credential Evaluation</div>
+        <div class="svc-desc">We manage your Trumerit and CGFNS application from start to finish so you don't have to navigate it alone.</div>
+        <ul class="svc-list">
+          <li class="svc-item">Document preparation guidance</li>
+          <li class="svc-item">Trumerit/CGFNS application filing</li>
+          <li class="svc-item">NMC verification support</li>
+          <li class="svc-item">Transcript submission guidance</li>
+        </ul>
+        <a href="#contact" class="svc-link">Learn More →</a>
+      </div>
+      <div class="svc-card fade-up stagger-1">
+        <div class="svc-icon">👩‍⚕️</div>
+        <div class="svc-title">Midwife Pathway</div>
+        <div class="svc-desc">Specialist support for Registered Midwives navigating the unique requirements of US and Canadian licensing.</div>
+        <ul class="svc-list">
+          <li class="svc-item">Midwifery credential evaluation</li>
+          <li class="svc-item">AMCB exam preparation</li>
+          <li class="svc-item">State-specific requirements</li>
+          <li class="svc-item">Visa Screen Certificate support</li>
+        </ul>
+        <a href="#contact" class="svc-link">Learn More →</a>
+      </div>
+      <div class="svc-card fade-up stagger-2">
+        <div class="svc-icon">🌍</div>
+        <div class="svc-title">Diaspora Fast-Track</div>
+        <div class="svc-desc">Already abroad in the UK, US, or Canada? We convert your African nursing qualification into a full international licence.</div>
+        <ul class="svc-list">
+          <li class="svc-item">Remote coaching (evening/weekend)</li>
+          <li class="svc-item">Tailored for shift workers</li>
+          <li class="svc-item">Sit NCLEX in your country</li>
+          <li class="svc-item">WhatsApp community access</li>
+        </ul>
+        <a href="#contact" class="svc-link">Learn More →</a>
+      </div>
+    </div>
+    <div class="disclaimer fade-up">
+      <strong>Important Disclaimer:</strong> NCLEX Pro Solutions does not issue the Authorization to Test (ATT) or grant RN licences. These decisions are made solely by State Boards of Nursing. All third-party fees (credential evaluation, board application, Pearson VUE, fingerprinting) are the responsibility of the client. We are a guidance and coaching service.
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ══ -->
+<section id="how">
+  <div class="wrap">
+    <div class="section-center fade-up">
+      <span class="section-tag">The Process</span>
+      <h2 class="section-title" style="margin-bottom:.75rem">Your Journey from<br><em>Ghana to USRN</em> in 6 Steps</h2>
+      <p class="section-sub">We have simplified one of the most complex processes in international nursing. Here is exactly what happens.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-step fade-up">
+        <div class="how-num">1</div>
+        <div class="how-title">Free Discovery Call</div>
+        <div class="how-desc">Tell us where you are. We map your personal pathway and answer every question.</div>
+      </div>
+      <div class="how-step active fade-up stagger-1">
+        <div class="how-num">2</div>
+        <div class="how-title">Register & Apply</div>
+        <div class="how-desc">Complete your client portal registration. We begin your credential evaluation immediately.</div>
+      </div>
+      <div class="how-step fade-up stagger-2">
+        <div class="how-num">3</div>
+        <div class="how-title">Credential Evaluation</div>
+        <div class="how-desc">We manage your Trumerit/CGFNS application and monitor progress on your behalf.</div>
+      </div>
+      <div class="how-step fade-up stagger-3">
+        <div class="how-num">4</div>
+        <div class="how-title">Board Application</div>
+        <div class="how-desc">State board registration, Pearson VUE ATT, fingerprinting — all handled by our team.</div>
+      </div>
+      <div class="how-step fade-up stagger-4">
+        <div class="how-num">5</div>
+        <div class="how-title">NCLEX Coaching</div>
+        <div class="how-desc">Your dedicated coach builds your 12-week study plan and prepares you for every question type.</div>
+      </div>
+      <div class="how-step fade-up">
+        <div class="how-num">6</div>
+        <div class="how-title">Pass & Get Licensed</div>
+        <div class="how-desc">Walk in confident. Walk out a US Registered Nurse. Join 350+ nurses who made it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STATS ══ -->
+<div id="stats-band">
+  <div class="wrap">
+    <div class="stats-inner">
+      <div class="stat-item fade-up"><span class="stat-num" data-target="350">0</span><div class="stat-label">Nurses Successfully Licensed</div><div class="stat-bar"><div class="stat-bar-fill" data-width="87"></div></div></div>
+      <div class="stat-item fade-up stagger-1"><span class="stat-num" data-target="95">0</span><div class="stat-label">First-Attempt Pass Rate (%)</div><div class="stat-bar"><div class="stat-bar-fill" data-width="95"></div></div></div>
+      <div class="stat-item fade-up stagger-2"><span class="stat-num" data-target="6">0</span><div class="stat-label">Expert Coaches on the Team</div><div class="stat-bar"><div class="stat-bar-fill" data-width="60"></div></div></div>
+      <div class="stat-item fade-up stagger-3"><span class="stat-num" data-target="3">0</span><div class="stat-label">Countries — US, Canada, Australia</div><div class="stat-bar"><div class="stat-bar-fill" data-width="50"></div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ AUDIENCE ══ -->
+<section id="audience" style="padding:5rem 0">
+  <div class="wrap">
+    <div class="section-center fade-up" style="margin-bottom:3rem">
+      <span class="section-tag">Who We Serve</span>
+      <h2 class="section-title" style="color:#fff;margin-bottom:.75rem">Two Audiences.<br><em>One Mission.</em></h2>
+    </div>
+    <div class="audience-grid">
+      <div class="aud-card fade-up" data-emoji="🌍">
+        <div class="aud-label">🌍 You're in Africa</div>
+        <h3 class="aud-title">Your International Nursing Career Starts Here</h3>
+        <p class="aud-desc">You have the qualification, the skill, and the drive. Whether you are in Ghana, Nigeria, Sierra Leone, Cameroon, Kenya, Zimbabwe, or anywhere across Africa — the NCLEX is the key that unlocks the US, Canada, and Australia. We help you turn that dream into a visa, a job, and a new life.</p>
+        <ul class="aud-points">
+          <li class="aud-point">Full credential evaluation from any African country to foreign board standards</li>
+          <li class="aud-point">Step-by-step board application — we handle the paperwork</li>
+          <li class="aud-point">NCLEX coaching delivered in person (Ghana) or fully remote across Africa and the diaspora</li>
+          <li class="aud-point">Community of African nurses across countries on the same journey</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Start My Application →</a>
+      </div>
+      <div class="aud-card fade-up stagger-2" data-emoji="✈️">
+        <div class="aud-label">✈️ You're in the Diaspora</div>
+        <h3 class="aud-title">You're Already There. Get the Licence.</h3>
+        <p class="aud-desc">You made it abroad. You are working, building, surviving. Now it's time to make it official and convert your African nursing qualification into a full international RN licence.</p>
+        <ul class="aud-points">
+          <li class="aud-point">Remote coaching — evenings and weekends around your shifts</li>
+          <li class="aud-point">Sit NCLEX in your current country of residence</li>
+          <li class="aud-point">WhatsApp support community for diaspora nurses</li>
+          <li class="aud-point">Referral programme — refer a colleague, earn a reward</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Join the Programme →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section id="testimonials">
+  <div class="wrap">
+    <div class="section-center fade-up">
+      <span class="section-tag">Success Stories</span>
+      <h2 class="section-title" style="margin-bottom:.75rem">Nurses Who <em>Made It</em></h2>
+      <p class="section-sub">Real stories from African nurses who passed their NCLEX with NCLEX Pro Solutions.</p>
+    </div>
+    <div class="testi-grid" style="margin-top:3rem">
+      <div class="testi-card testi-featured fade-up">
+        <div class="testi-quote-mark">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">From Accra to New York in 14 months. I had tried studying on my own for two years and kept failing. Tilly sat with me, identified exactly where I was going wrong, and rebuilt my confidence from the ground up. I passed in 85 questions on my first proper attempt after joining NCLEX Pro Solutions. I am now working at NYU Langone and I send every African nurse I meet to Tilly.</p>
+        <div class="testi-author"><div class="testi-avatar">AO</div><div><div class="testi-name">Abena Osei-Mensah</div><div class="testi-role" style="color:rgba(255,255,255,.4)">USRN · New York, USA 🇺🇸</div></div></div>
+      </div>
+      <div class="testi-card fade-up stagger-1">
+        <div class="testi-quote-mark">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">If you are an aspiring USRN, look no further. The support is personalised, the advice is practical, and the experience was seamless from start to finish. I passed on my first attempt and I am now working in Toronto.</p>
+        <div class="testi-author"><div class="testi-avatar">AA</div><div><div class="testi-name">Afryea Adadevoh</div><div class="testi-role">USRN · Toronto, Canada 🇨🇦</div></div></div>
+      </div>
+      <div class="testi-card fade-up stagger-2">
+        <div class="testi-quote-mark">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">I failed twice before I found NCLEX Pro Solutions. Tilly's retakers programme changed everything. They found exactly what I was doing wrong with SATA questions and fixed it in 3 weeks. Third attempt — I passed. I cried for two hours straight.</p>
+        <div class="testi-author"><div class="testi-avatar">JK</div><div><div class="testi-name">John Kumi</div><div class="testi-role">USRN · Accra → Houston 🇺🇸</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT TILLY ══ -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-inner">
+      <div class="about-img-wrap fade-up">
+        <div class="about-img">
+          <div class="about-img-placeholder">👩‍⚕️</div>
+        </div>
+        <div class="about-img-card">
+          <div class="about-img-num">350+</div>
+          <div class="about-img-lbl">Nurses Coached</div>
+        </div>
+        <div class="about-img-card2">
+          <span>🏆 95% Pass Rate</span>
+          <span style="font-size:.68rem;opacity:.75;font-weight:500">First Attempt</span>
+        </div>
+      </div>
+      <div class="fade-up stagger-1">
+        <span class="section-tag">Meet Your Coach</span>
+        <h2 class="section-title" style="margin-bottom:.3rem">Matilda Osae</h2>
+        <p style="color:var(--teal);font-weight:700;margin-bottom:1.2rem;font-size:1rem">RN, BSN — Founder, NCLEX Pro Solutions</p>
+        <div class="about-credentials">
+          <span class="credential">Registered Nurse</span>
+          <span class="credential">BSN</span>
+          <span class="credential">NCLEX Specialist</span>
+          <span class="credential">Based in Accra, Ghana</span>
+        </div>
+        <p class="about-bio">I am a Registered Nurse with a passion that goes way beyond the clinical floor — it is about connecting with nurses on a human level and helping them reach their fullest potential. I know what it feels like to look at the NCLEX and wonder if it is even possible. I built NCLEX Pro Solutions because I knew the path to international nursing did not have to be as hard, as confusing, or as lonely as it was made out to be.</p>
+        <p class="about-bio">Since founding the practice, I have personally coached or supervised the coaching of over 350 African nurses who are now working in the US, Canada, and Australia. Every strategy, every study plan, every session is built around one goal — your pass.</p>
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+          <a href="#contact" class="btn btn-primary">Book a Call with Tilly →</a>
+          <a href="https://wa.me/233504299230" class="btn btn-outline">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PORTAL CTA ══ -->
+<section id="portal-cta">
+  <div class="wrap">
+    <div class="portal-cta-inner">
+      <div class="fade-up">
+        <span class="section-tag">Client Portal & Question Bank</span>
+        <h2 class="portal-title">Your NCLEX Journey,<br><span>Fully Managed Online</span></h2>
+        <p class="portal-desc">Every client gets access to our dedicated portal — track your application, book sessions, make payments, and practice NCLEX questions with AI-powered explanations.</p>
+        <ul class="portal-features">
+          <li class="portal-feature">6-stage application tracker — like CGFNS, but personalised for you</li>
+          <li class="portal-feature">85+ NCLEX questions — MCQ, SATA, NGN types, case studies</li>
+          <li class="portal-feature">AI-powered explanations after every answer</li>
+          <li class="portal-feature">Book sessions and pay securely online</li>
+          <li class="portal-feature">Document upload and status tracking</li>
+        </ul>
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+          <a href="https://portal.nclexprosolutions.com/register" class="btn btn-primary btn-lg">Create Free Account →</a>
+          <a href="https://portal.nclexprosolutions.com/login" class="btn btn-outline-white">Log In</a>
+        </div>
+      </div>
+      <div class="fade-up stagger-2">
+        <div class="portal-cards">
+          <a href="https://portal.nclexprosolutions.com/register" class="p-card">
+            <span class="p-card-icon">📋</span>
+            <div class="p-card-title">Register</div>
+            <div class="p-card-sub">Start your application</div>
+          </a>
+          <a href="https://portal.nclexprosolutions.com/track" class="p-card">
+            <span class="p-card-icon">📊</span>
+            <div class="p-card-title">Track Progress</div>
+            <div class="p-card-sub">Live application status</div>
+          </a>
+          <a href="https://portal.nclexprosolutions.com/qbank" class="p-card">
+            <span class="p-card-icon">📚</span>
+            <div class="p-card-title">Question Bank</div>
+            <div class="p-card-sub">Practice NCLEX questions</div>
+          </a>
+          <a href="https://portal.nclexprosolutions.com/book" class="p-card">
+            <span class="p-card-icon">📅</span>
+            <div class="p-card-title">Book a Session</div>
+            <div class="p-card-sub">Schedule with Tilly</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RESOURCES ══ -->
+<section id="resources">
+  <div class="wrap">
+    <div class="section-center fade-up">
+      <span class="section-tag">Free Resources</span>
+      <h2 class="section-title" style="margin-bottom:.75rem">Everything You Need to<br><em>Prepare With Confidence</em></h2>
+    </div>
+    <div class="resources-grid">
+      <div class="res-card fade-up">
+        <div class="res-icon">📥</div>
+        <div class="res-title">Free NCLEX Study Guide</div>
+        <div class="res-desc">The exact 12-week study roadmap our 350+ successful African nurses followed. Download free.</div>
+        <a href="#contact" class="res-link">Download Free →</a>
+      </div>
+      <div class="res-card fade-up stagger-1">
+        <div class="res-icon">📚</div>
+        <div class="res-title">Question Bank</div>
+        <div class="res-desc">85+ NCLEX practice questions across all categories — MCQ, SATA, NGN types, case studies.</div>
+        <a href="https://portal.nclexprosolutions.com/qbank" class="res-link">Practice Now →</a>
+      </div>
+      <div class="res-card fade-up stagger-2">
+        <div class="res-icon">🎬</div>
+        <div class="res-title">Video Library</div>
+        <div class="res-desc">YouTube tutorials on NCLEX prep, Trumerit process, state board applications, and more.</div>
+        <a href="https://youtube.com/@nclexprosolutions" class="res-link">Watch Now →</a>
+      </div>
+      <div class="res-card fade-up stagger-3">
+        <div class="res-icon">📋</div>
+        <div class="res-title">NCLEX Checklist</div>
+        <div class="res-desc">Step-by-step checklist for Ghanaian nurses — from NMC pin to Pearson VUE exam day.</div>
+        <a href="#contact" class="res-link">Get Checklist →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NEWS ══ -->
+<section id="news">
+  <div class="wrap">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem">
+      <div class="fade-up">
+        <span class="section-tag">Latest News</span>
+        <h2 class="section-title">NCLEX & Nursing<br><em>Updates</em></h2>
+      </div>
+      <a href="#" class="btn btn-outline btn-sm">View All →</a>
+    </div>
+    <div class="news-grid">
+      <div class="news-card fade-up">
+        <div class="news-img"><span class="news-cat">NCLEX Update</span>🧪</div>
+        <div class="news-body">
+          <div class="news-date">June 2025</div>
+          <div class="news-title">Next Generation NCLEX (NGN): What African Nurses Need to Know in 2025</div>
+          <div class="news-excerpt">The NCLEX has evolved. Here's a breakdown of the new question types and how to prepare for them effectively.</div>
+        </div>
+      </div>
+      <div class="news-card fade-up stagger-1">
+        <div class="news-img"><span class="news-cat">Immigration</span>🛂</div>
+        <div class="news-body">
+          <div class="news-date">May 2025</div>
+          <div class="news-title">New States Join the Nurse Licensure Compact — What It Means for You</div>
+          <div class="news-excerpt">The NLC now covers 41 states. If you're considering a US nursing career, here's what this means for your licence.</div>
+        </div>
+      </div>
+      <div class="news-card fade-up stagger-2">
+        <div class="news-img"><span class="news-cat">Ghana Nurses</span>🇬🇭</div>
+        <div class="news-body">
+          <div class="news-date">April 2025</div>
+          <div class="news-title">US Nursing Shortage: Why Now Is the Best Time for African Nurses to Apply</div>
+          <div class="news-excerpt">The US is experiencing its biggest nursing shortage in decades. Demand for internationally educated nurses has never been higher.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section id="faq" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="section-center fade-up">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title" style="margin-bottom:.75rem">Frequently Asked<br><em>Questions</em></h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Can a Diploma nurse from Ghana apply to write the NCLEX?</span><div class="faq-arrow">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes — Diploma nurses from Ghana can apply to write the NCLEX. However, the eligibility depends on the state board you apply to. Some states (like Montana and Nevada) are more accessible to diploma nurses. We assess your qualifications on your discovery call and recommend the best state for your background.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How long does the entire process take from registration to NCLEX?</span><div class="faq-arrow">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner">The full process typically takes 12–18 months from start to exam day. Credential evaluation alone takes 8–12 weeks with Trumerit or CGFNS. Board application processing takes 4–8 weeks. We begin your NCLEX coaching in parallel so you are ready the moment your ATT arrives. Timelines may vary slightly by country of origin.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Where can African nurses write the NCLEX exam?</span><div class="faq-arrow">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner">African nurses can write the NCLEX at Pearson VUE testing centres across Africa (Ghana, Nigeria, South Africa, Kenya), as well as the UK, USA, Canada, and many other countries. You do not need to travel to the US to sit the exam. We help you book your exam at the most convenient location.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">How much does the full process cost?</span><div class="faq-arrow">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Our service fees are separate from the third-party fees (Trumerit, Pearson VUE, state board). Our packages start from GHS 1,200 for coaching only up to GHS 2,500 for the full package. Third-party costs typically add $500–$900 USD. We give you a full transparent cost breakdown on your discovery call — no hidden fees.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">Do you help with Midwives and Public Health Nurses — not just RNs?</span><div class="faq-arrow">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes. We have specialist pathways for Registered Midwives (RM) and Registered Public Health Nurses (RPHN). The process differs from standard RN applications and we have coaches with specific expertise in these pathways. Book a discovery call to discuss your specific qualification.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">I'm already abroad in the UK — can I still use NCLEX Pro Solutions?</span><div class="faq-arrow">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Absolutely. A significant portion of our clients are diaspora nurses in the UK, US, and Canada who want to convert their African nursing qualification. All our coaching is available remotely via WhatsApp video, Zoom, and Google Meet. We run evening and weekend sessions to work around your shift pattern.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text">What happens if I fail my NCLEX after coaching with you?</span><div class="faq-arrow">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner">We stand by our clients. If you complete the full coaching programme and do not pass, we will work with you at a reduced retaker rate to prepare for your retest. We analyse your NCLEX performance report together, identify gaps, and rebuild your strategy. Our 95% first-attempt pass rate speaks to how seriously we take preparation.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-inner">
+      <div class="fade-up">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="contact-info-title">Book Your Free<br>Discovery Call</h2>
+        <p class="contact-info-sub">Ready to start your NCLEX journey? Fill in the form and Tilly's team will reach out within 24 hours. Or jump straight to WhatsApp for instant response.</p>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div><div class="contact-label">Location</div><div class="contact-value">Accra, Ghana (Remote worldwide)</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div><div class="contact-label">Phone / WhatsApp</div><div class="contact-value">+233 (0) 50 429 9230</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div><div class="contact-label">Email</div><div class="contact-value">info@nclexprosolutions.com</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div><div class="contact-label">Office Hours</div><div class="contact-value">Mon–Sat: 8am – 7pm GMT</div></div>
+        </div>
+        <div style="margin-top:1.5rem">
+          <a href="https://wa.me/233504299230" style="display:inline-flex;align-items:center;gap:.6rem;background:#25d366;color:#fff;padding:.75rem 1.5rem;border-radius:50px;font-weight:700;font-size:.9rem;text-decoration:none;transition:all .2s">💬 Message Tilly on WhatsApp</a>
+        </div>
+      </div>
+      <div class="contact-form fade-up stagger-1">
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--navy);margin-bottom:1.5rem">Send Us a Message</h3>
+        <div class="fg-row">
+          <div class="fg"><label>First Name <span class="req">*</span></label><input type="text" placeholder="Abena"/></div>
+          <div class="fg"><label>Last Name <span class="req">*</span></label><input type="text" placeholder="Mensah"/></div>
+        </div>
+        <div class="fg"><label>Email Address <span class="req">*</span></label><input type="email" placeholder="your@email.com"/></div>
+        <div class="fg"><label>WhatsApp Number <span class="req">*</span></label><input type="tel" placeholder="+233 XX XXX XXXX"/></div>
+        <div class="fg"><label>Current Country</label><select><option value="">Select country</option><option>Ghana</option><option>Nigeria</option><option>Sierra Leone</option><option>Kenya</option><option>Zimbabwe</option><option>Cameroon</option><option>Liberia</option><option>South Africa</option><option>Tanzania</option><option>United Kingdom</option><option>United States</option><option>Canada</option><option>Australia</option><option>Other</option></select></div>
+        <div class="fg"><label>Service Interested In <span class="req">*</span></label><select><option value="">Select a service</option><option>Full Package (Registration + Coaching)</option><option>NCLEX Coaching Only</option><option>Retakers Programme</option><option>Credential Evaluation Only</option><option>Midwife Pathway</option><option>Free Discovery Call</option></select></div>
+        <div class="fg"><label>Message</label><textarea placeholder="Tell us about your situation — where are you in the process and what do you need help with?"></textarea></div>
+        <button class="btn btn-primary btn-lg" style="width:100%" onclick="submitContact(this)">Send Message →</button>
+        <div id="contact-success" style="display:none;text-align:center;padding:1.5rem;color:var(--teal);font-weight:700">✅ Message sent! Tilly will be in touch within 24 hours.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-name">NCLEX <span>Pro</span> Solutions</div>
+        <p class="footer-tagline">Africa's leading NCLEX coaching agency. Helping nurses from Ghana, Nigeria, Sierra Leone, Kenya and across Africa become US, Canadian, and Australian Registered Nurses since 2024.</p>
+        <a href="https://wa.me/233504299230" class="footer-wa">💬 Chat on WhatsApp</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Full Package</a></li>
+          <li><a href="#services">NCLEX Coaching</a></li>
+          <li><a href="#services">Retakers Programme</a></li>
+          <li><a href="#services">Credential Evaluation</a></li>
+          <li><a href="#services">Midwife Pathway</a></li>
+          <li><a href="#services">Diaspora Fast-Track</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Portal</div>
+        <ul class="footer-links">
+          <li><a href="https://portal.nclexprosolutions.com/register">Create Account</a></li>
+          <li><a href="https://portal.nclexprosolutions.com/login">Client Login</a></li>
+          <li><a href="https://portal.nclexprosolutions.com/track">Track Application</a></li>
+          <li><a href="https://portal.nclexprosolutions.com/qbank">Question Bank</a></li>
+          <li><a href="https://portal.nclexprosolutions.com/book">Book a Session</a></li>
+          <li><a href="https://portal.nclexprosolutions.com/pay">Make Payment</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="#about">About Tilly</a></li>
+          <li><a href="#testimonials">Success Stories</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#news">News & Updates</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 NCLEX Pro Solutions (Nurses Pathway Solutions). All rights reserved. · <a href="#" style="color:rgba(255,255,255,.3);text-decoration:none">Privacy Policy</a> · <a href="#" style="color:rgba(255,255,255,.3);text-decoration:none">Terms</a> · <a href="#" style="color:rgba(255,255,255,.3);text-decoration:none">Disclaimer</a></div>
+      <div class="footer-socials">
+        <a href="#" class="social-icon">f</a>
+        <a href="#" class="social-icon">in</a>
+        <a href="#" class="social-icon">▶</a>
+        <a href="#" class="social-icon">🎵</a>
+        <a href="#" class="social-icon">📸</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/233504299230" class="wa-float">
+  <span class="wa-float-tip">Chat with Tilly</span>
+  💬
+</a>
+
+<script>
+// ── NAV SCROLL ──
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// ── MOBILE NAV ──
+function toggleMobNav() {
+  document.getElementById('mob-nav').classList.toggle('open');
+}
+
+// ── HERO AUDIENCE TABS ──
+const heroPaths = [
+  [
+    {icon:'📋',title:'Credential Evaluation',sub:'NMC/CGFNS/Trumerit application handled'},
+    {icon:'📝',title:'Board Application',sub:'State board + Pearson VUE ATT registration'},
+    {icon:'🎯',title:'Expert NCLEX Coaching',sub:'Personalised 12-week study plan'},
+    {icon:'🏆',title:'Pass & Get Licensed',sub:'Join 350+ nurses working in the US'},
+  ],
+  [
+    {icon:'📱',title:'Remote Coaching',sub:'Evenings & weekends around your shifts'},
+    {icon:'🌍',title:'Sit NCLEX Locally',sub:'Test in UK, US, Canada — no need to travel'},
+    {icon:'🔄',title:'Licence Conversion',sub:'Convert your African RN to international RN'},
+    {icon:'👥',title:'Diaspora Community',sub:'WhatsApp community of African nurses abroad'},
+  ],
+  [
+    {icon:'🔍',title:'Gap Analysis',sub:'We find exactly where you lost marks'},
+    {icon:'🎯',title:'Targeted Retraining',sub:'Intensive focus on your weak areas only'},
+    {icon:'✦',title:'NGN Mastery',sub:'Next Gen question types that trip retakers'},
+    {icon:'🚀',title:'Retest Strategy',sub:'Walk in different. Walk out licensed.'},
+  ]
+];
+
+function switchAud(btn, idx) {
+  document.querySelectorAll('.aud-tab').forEach(t => t.classList.remove('on'));
+  btn.classList.add('on');
+  const path = document.getElementById('hero-path');
+  path.style.opacity = '0';
+  setTimeout(() => {
+    path.innerHTML = heroPaths[idx].map(p =>
+      `<li class="path-item"><div class="path-icon">${p.icon}</div><div class="path-text"><strong>${p.title}</strong><span>${p.sub}</span></div></li>`
+    ).join('');
+    path.style.opacity = '1';
+  }, 180);
+}
+
+// ── FAQ ──
+function toggleFaq(el) {
+  const item = el.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// ── CONTACT FORM ──
+function submitContact(btn) {
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.style.display = 'none';
+    document.getElementById('contact-success').style.display = 'block';
+  }, 1200);
+}
+
+// ── SCROLL ANIMATIONS ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      // Stat counters
+      e.target.querySelectorAll('.stat-num[data-target]').forEach(el => {
+        animateCount(el, parseInt(el.dataset.target));
+      });
+      // Stat bars
+      e.target.querySelectorAll('.stat-bar-fill[data-width]').forEach(el => {
+        el.style.width = el.dataset.width + '%';
+      });
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+document.querySelectorAll('#stats-band').forEach(el => observer.observe(el));
+
+function animateCount(el, target) {
+  const suffix = el.textContent.includes('%') ? '%' : el.textContent.includes('+') ? '+' : '';
+  let start = 0;
+  const duration = 1800;
+  const step = target / (duration / 16);
+  const timer = setInterval(() => {
+    start = Math.min(start + step, target);
+    el.textContent = Math.floor(start) + suffix;
+    if (start >= target) clearInterval(timer);
+  }, 16);
+}
+
+// Smooth transition for hero path opacity
+document.getElementById('hero-path').style.transition = 'opacity .18s ease';
+</script>
+</body>
+</html>
